@@ -32,16 +32,17 @@ class SsdbClient(object):
 
     """
 
-    def __init__(self, name, host, port):
+    def __init__(self, name, host, port, password):
         """
         init
         :param name: hash name
         :param host: ssdb host
         :param port: ssdb port
+        :param password: ssdb password
         :return:
         """
         self.name = name
-        self.__conn = Redis(connection_pool=BlockingConnectionPool(host=host, port=port))
+        self.__conn = Redis(connection_pool=BlockingConnectionPool(host=host, port=port, password=password))
 
     def get(self, proxy):
         """
@@ -112,5 +113,6 @@ class SsdbClient(object):
         self.name = name
 
 if __name__ == '__main__':
-    c = SsdbClient('useful_proxy', '118.24.52.95', 8899)
+    c = SsdbClient('test_zh', '127.0.0.1', 6679, 'zh2683')
+    c.put('name', "1234qwerasdf")
     print(c.getAll())

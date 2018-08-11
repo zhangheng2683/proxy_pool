@@ -2,13 +2,13 @@
 # !/usr/bin/env python
 """
 -------------------------------------------------
-   File Name：     ProxyApi.py  
-   Description :  
+   File Name：     ProxyApi.py
+   Description :
    Author :       JHao
    date：          2016/12/4
 -------------------------------------------------
    Change Activity:
-                   2016/12/4: 
+                   2016/12/4:
 -------------------------------------------------
 """
 __author__ = 'JHao'

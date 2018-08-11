@@ -16,7 +16,7 @@ import sys
 import requests
 
 try:
-    from importlib import reload  # py3 实际不会实用，只是为了不显示语法错误
+    from importlib import reload  # py3 实际不会使用，只是为了不显示语法错误
 except:
     reload(sys)
     sys.setdefaultencoding('utf-8')
